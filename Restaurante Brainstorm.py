@@ -709,4 +709,78 @@ def menu():
     Vino.grid(row=8, column=0, sticky=W)
 
 #########################################################################
+#Parte 7 Daniel Dasilva   
+
+    # Entrada de datos para cada Bebida
+    textPepsi = Entry(marcoBebidas, font=Subtitle, bd=7, width=8, state=DISABLED, textvariable=txtPepsi)
+    textPepsi.grid(row=0, column=1)
+    textCocaCola = Entry(marcoBebidas, font=Subtitle, bd=7, width=8, state=DISABLED, textvariable=txtCoca)
+    textCocaCola.grid(row=1, column=1)
+    textFanta = Entry(marcoBebidas, font=Subtitle, bd=7, width=8, state=DISABLED, textvariable=txtFanta)
+    textFanta.grid(row=2, column=1)
+    textSprite = Entry(marcoBebidas, font=Subtitle, bd=7, width=8, state=DISABLED, textvariable=txtSprite)
+    textSprite.grid(row=3, column=1)
+    textAguaS = Entry(marcoBebidas, font=Subtitle, bd=7, width=8, state=DISABLED, textvariable=txtAguaS)
+    textAguaS.grid(row=4, column=1)
+    textAgua = Entry(marcoBebidas, font=Subtitle, bd=7, width=8, state=DISABLED, textvariable=txtAgua)
+    textAgua.grid(row=5, column=1)
+    textAndes = Entry(marcoBebidas, font=Subtitle, bd=7, width=8, state=DISABLED, textvariable=txtAndes)
+    textAndes.grid(row=6, column=1)
+    textQuilmes = Entry(marcoBebidas, font=Subtitle, bd=7, width=8, state=DISABLED, textvariable=txtQuilmes)
+    textQuilmes.grid(row=7, column=1)
+    textVino = Entry(marcoBebidas, font=Subtitle, bd=7, width=8, state=DISABLED, textvariable=txtVino)
+    textVino.grid(row=8, column=1)
+
+    #Etiquetas: totales
+    costoComida = Label(marcoCosto, text="Total de comida $", font=Subtitle, bd=10, bg="#FF9933", fg="white")
+    costoComida.grid(row=0, column=0)
+    entryCostoComida = Entry(marcoCosto, font=Subtitle, bd=5, width=14, state="readonly")
+    entryCostoComida.grid(row=0, column=1, padx=5)
+
+    costoBebidas = Label(marcoCosto, text="Total Bebidas $", font=Subtitle, bd=10, bg="#FF9933", fg="white")
+    costoBebidas.grid(row=1, column=0)
+    entryCostoBebidas = Entry(marcoCosto, font=Subtitle, bd=5, width=14, state="readonly")
+    entryCostoBebidas.grid(row=1, column=1, padx=5)
+
+    costoTotal = Label(marcoCosto, text="Total $", font=Subtitle, bd=10, bg="#FF9933", fg="white")
+    costoTotal.grid(row=2, column=0)
+    entryTotal = Entry(marcoCosto, font=Subtitle, bd=5, width=14, state="readonly")
+    entryTotal.grid(row=2, column=1, padx=5)
+
+    #Recibo
+    textoText = Text(marcoTexto, font=("arial", 12, "bold"), bd=3, width=48, height=12)
+    textoText.grid(row=0, column=0)
+
+    #Botones de cuadro derecho
+    botonTotal = Button(marcoBoton, text="Total", font=Subtitle, fg="white", bg="#202020", bd=4, padx=5, command=totalFinal)
+    botonTotal.grid(row=0,column=0)
+
+    botonTexto = Button(marcoBoton, text="Ayuda", font=Subtitle, fg="white", bg="#202020", bd=4, padx=5, command=texto)
+    botonTexto.grid(row=0, column=1)
+
+    botonGuardar = Button(marcoBoton, text="Guardar", font=Subtitle, fg="white", bg="#202020", bd=4, padx=5, command=guardar)
+    botonGuardar.grid(row=0, column=2)
+
+    botonBorrar = Button(marcoBoton, text="Borrar", font=Subtitle, fg="white", bg="#202020", bd=4, padx=5, command=borrar)
+    botonBorrar.grid(row=0, column=3)
+
+    botonSalida = Button(marcoBoton, text="Salir", font=Subtitle, fg="white", bg="#202020", bd=4, padx=5, command=salirMenu)
+    botonSalida.grid(row=0, column=4)
+
+#Ventana menu: Boton
+menuBoton = Button(ventana, font=Subtitle, text="Ordenar", command=menu, height="2", width="20")
+menuBoton.config(bd=2, bg="#202020", fg="white")
+menuBoton.pack()
+menuBoton.place(x=200, y=300)
+
+
+salir = Button(ventana, font=Subtitle, text="Salir", command=salidaPrincipal, width="20", height="2")
+salir.config(bd=2, bg="#202020", fg="white")
+salir.pack()
+salir.place(x=200, y=400)
+
+ventana.mainloop()
+
+##########################################################
+
 
