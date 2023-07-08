@@ -120,7 +120,205 @@ def ventanaReserva():
         conn.close()
 
         id_eliminar.delete(0, END)
+    
+##########################################################
+#Parte 2 Jimena Mansilla
+    frame = Frame(ventana_reserva, bd="2", relief=RIDGE, bg="#FF9933")
+    frame.place(relx=0.1, rely=0.1, relheight=0.8, relwidth=0.8)
 
+    label = Label(frame, width="17",height="1", bg="#FF9933",
+                  font=Subtitle, text="AGREGAR REGISTRO")
+    label.grid(row=0, column=1)
+
+    label = Label(frame, width="15",height="1", bg="gray", fg="white",
+                  font=Subtitle, text="Nombre")
+    label.grid(row=1, column=0)
+
+    entry_nombre = Entry(frame)
+    entry_nombre.grid(row=1, column=1)
+
+    #
+    label = Label(frame, width="15",height="1", bg="gray", fg="white",
+                  font=Subtitle, text="Cantidad Personas")
+    label.grid(row=3, column=0)
+
+    entry_cantidad = Entry(frame)
+    entry_cantidad.grid(row=3, column=1)
+
+    #
+    label = Label(frame, width="15",height="1", bg="gray", fg="white",
+                  font=Subtitle, text="Contacto")
+    label.grid(row=6, column=0)
+
+    entry_contacto = Entry(frame)
+    entry_contacto.grid(row=6, column=1)
+
+    button = Button(frame, font=Subtitle, text="Add", bg="#202020", fg="white"
+                    ,command=lambda:guardar_nueva_reserva(entry_nombre.get(),
+                                                        entry_cantidad.get(),
+                                                        entry_contacto.get()))
+    button.grid(row=7, column=1, sticky=W+E)
+
+    # Buscar reserva
+    label = Label(frame, width="14",height="1", bg="gray", fg="white",
+                  font=Subtitle, text="Busqueda")
+    label.grid(row=9, column=0)
+
+    id_buscar = Entry(frame)
+    id_buscar.grid(row=9, column=1)
+
+    boton = Button(frame, font=Subtitle, text="Buscar",width="10",height="1",
+                   bg="#202020", fg="white",
+                   command=lambda:buscar(id_buscar.get()))
+    boton.grid(row=9, column=2)
+
+    label = Label(frame, width="14",height="1", bg="gray", fg="white",
+                  font=Subtitle,text="Busqueda por id")
+    label.grid(row=10, column=0)
+
+    id_eliminar = Entry(frame)
+    id_eliminar.grid(row=10, column=1)
+
+    boton_eliminar = Button(frame, font=Subtitle, text="Eliminar",width="10",height="1",
+                            bg="#202020", fg="white",
+                            command=lambda:eliminar(id_eliminar.get()))
+    boton_eliminar.grid(row=10, column=2)
+
+    boton_mostrar = Button(frame, font=Subtitle, text="Mostrar reservas",width="16",height="1",
+                           bg="#202020", fg="white",
+                           command=mostrar)
+    boton_mostrar.grid(row=11,column=1)
+
+    #mostrar_reservas()
+    # Fin de Reserva
+
+# Boton de ingreso a ventana Reservas
+boton_reservas = Button(ventana, font=Subtitle, text="Reservas",command=ventanaReserva,width="20",height="2")
+boton_reservas.config(bd=2, bg="#202020", fg="white")
+boton_reservas.pack()
+boton_reservas.place(x=200, y=200)
+##############################
+##############################
+
+def menu():
+    ventanaMenu = Toplevel()
+    ventanaMenu.config(bg="#202020")
+    ventanaMenu.title("Menu")
+    ventanaMenu.geometry("1260x650")
+
+    def texto():
+        textoText.delete(1.0, END)
+        x = random.randint(1, 10000)
+        noText = "No" + str(x)
+        fecha = time.strftime("%d-%m-%y")
+        textoText.insert(END, "Ayuda.." + noText + "\t\t\t\t Fecha:" + fecha + "\n")
+        textoText.insert(END, "********************************************************\n")
+        textoText.insert(END, "Instrucciones \t\t\t Para ordenar usted debe:\n")
+        textoText.insert(END, "¡BIENVENIDO! "+ "\n")
+        textoText.insert(END, "Haga click sobre el check para desbloquear la funcion y "+"\n" +
+                         "digitar las unidades que desea consumir")
+        textoText.insert(END, "*******************************************************\n\n")
+        textoText.insert(END, "Le deseamos la mejor de las experiencias \t\t\t"+ "\n")
+
+    def guardar():
+        url=filedialog.asksaveasfile(mode="w", defaultextension=".txt")
+        datos_recibo=textoText.get(1.0, END)
+        url.write(datos_recibo)
+        url.close()
+        messagebox.showinfo("Informacion", message="Instrucciones almacenada con exito")
+
+    def borrar():
+        textoText.delete(1.0, END)
+        #Variables para textos: Comida
+        txtAsado.set("0")
+        txtMilanesa.set("0")
+        txtPure.set("0")
+        txtEnsalada.set("0")
+        txtPapas.set("0")
+        txtPollo.set("0")
+        txtPastas.set("0")
+        txtArroz.set("0")
+        txtPizza.set("0")
+
+        # Variables para textos: Bebidas
+        txtPepsi.set("0")
+        txtCoca.set("0")
+        txtFanta.set("0")
+        txtSprite.set("0")
+        txtAguaS.set("0")
+        txtAgua.set("0")
+        txtAndes.set("0")
+        txtQuilmes.set("0")
+        txtVino.set("0")
+
+        # Desactivar casillas de textos
+        textAsado.config(state=DISABLED)
+        textMilanesa.config(state=DISABLED)
+        textPure.config(state=DISABLED)
+        textEnsalada.config(state=DISABLED)
+        textPapas.config(state=DISABLED)
+        textPollo.config(state=DISABLED)
+        textPastas.config(state=DISABLED)
+        textArroz.config(state=DISABLED)
+        textPizza.config(state=DISABLED)
+
+        # Bebidas
+        textPepsi.config(state=DISABLED)
+        textPepsi.config(state=DISABLED)
+        textFanta.config(state=DISABLED)
+        textSprite.config(state=DISABLED)
+        textAguaS.config(state=DISABLED)
+        textAgua.config(state=DISABLED)
+        textAndes.config(state=DISABLED)
+        textQuilmes.config(state=DISABLED)
+        textVino.config(state=DISABLED)
+
+        # Variables
+        var1.set(0)
+        var2.set(0)
+        var3.set(0)
+        var4.set(0)
+        var5.set(0)
+        var6.set(0)
+        var7.set(0)
+        var8.set(0)
+        var9.set(0)
+        var10.set(0)
+        var11.set(0)
+        var12.set(0)
+        var13.set(0)
+        var14.set(0)
+        var15.set(0)
+        var16.set(0)
+        var17.set(0)
+        var18.set(0)
+
+        global varcostocomida, varcostobebidas, total
+        varcostocomida=0
+        varcostobebidas=0
+        total=0
+
+        entryCostoComida.config(state=NORMAL)
+        entryCostoComida.delete(0, END)
+        entryCostoComida.insert(0, varcostocomida)
+        entryCostoComida.config(state=DISABLED)
+
+        entryCostoBebidas.config(state=NORMAL)
+        entryCostoBebidas.delete(0, END)
+        entryCostoBebidas.insert(0, varcostobebidas)
+        entryCostoBebidas.config(state=DISABLED)
+
+        entryTotal.config(state=NORMAL)
+        entryTotal.delete(0, END)
+        entryTotal.insert(0, total)
+        entryTotal.config(state=DISABLED)
+
+    def salirMenu():
+        ventanaMenu.destroy()
+
+#Funcion
+    def totalFinal():
+        global varcostocomida, varcostobebidas, total
 ##########################################################
 #Perte 3 Giunta Pilar
 # Definimos los Valores de la comida 
