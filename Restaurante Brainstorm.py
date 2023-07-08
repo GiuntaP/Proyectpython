@@ -628,3 +628,85 @@ def menu():
 
     varcostocomida = StringVar()
 #########################################################################
+#  Parte 6 Gisela Fernández  
+
+# Definir platos, etiquetas y botones
+    Asado = Checkbutton(marcoComida, text="Asado----$1000", font=Subtitle, onvalue=1, offvalue=0, variable=var1,
+                        command=asado)
+    Asado.grid(row=0, column=0, sticky=W)
+    Milanesa = Checkbutton(marcoComida, text="Milanesa--$700", font=Subtitle, onvalue=1, offvalue=0, variable=var2,
+                           command=milanesa)
+    Milanesa.grid(row=1, column=0, sticky=W)
+    Pure = Checkbutton(marcoComida, text="Pure-------$500", font=Subtitle, onvalue=1, offvalue=0, variable=var3,
+                       command=pure)
+    Pure.grid(row=2, column=0, sticky=W)
+    Ensalada = Checkbutton(marcoComida, text="Ensalada-$750", font=Subtitle, onvalue=1, offvalue=0, variable=var4,
+                           command=ensalada)
+    Ensalada.grid(row=3, column=0, sticky=W)
+    PapasFritas = Checkbutton(marcoComida, text="Papas\nFritas----$1500", font=Subtitle, onvalue=1, offvalue=0,
+                              variable=var5, command=papas)
+    PapasFritas.grid(row=4, column=0, sticky=W)
+    Pollo = Checkbutton(marcoComida, text="Pollo-------$800", font=Subtitle, onvalue=1, offvalue=0, variable=var6,
+                        command=pollo)
+    Pollo.grid(row=5, column=0, sticky=W)
+    Pastas = Checkbutton(marcoComida, text="Pastas----$1100", font=Subtitle, onvalue=1, offvalue=0, variable=var7,
+                         command=pastas)
+    Pastas.grid(row=6, column=0, sticky=W)
+    Arroz = Checkbutton(marcoComida, text="Arroz------$600", font=Subtitle, onvalue=1, offvalue=0, variable=var8,
+                        command=arroz)
+    Arroz.grid(row=7, column=0, sticky=W)
+    Pizza = Checkbutton(marcoComida, text="Pizza-----$1500", font=Subtitle, onvalue=1, offvalue=0, variable=var9,
+                        command=pizza)
+    Pizza.grid(row=8, column=0, sticky=W)
+
+    # Entrada de datos para cada comida
+    textAsado = Entry(marcoComida, font=Subtitle, bd=7, width=8, state=DISABLED, textvariable=txtAsado)
+    textAsado.grid(row=0, column=1)
+    textMilanesa = Entry(marcoComida, font=Subtitle, bd=7, width=8, state=DISABLED, textvariable=txtMilanesa)
+    textMilanesa.grid(row=1, column=1)
+    textPure = Entry(marcoComida, font=Subtitle, bd=7, width=8, state=DISABLED, textvariable=txtPure)
+    textPure.grid(row=2, column=1)
+    textEnsalada = Entry(marcoComida, font=Subtitle, bd=7, width=8, state=DISABLED, textvariable=txtEnsalada)
+    textEnsalada.grid(row=3, column=1)
+    textPapas = Entry(marcoComida, font=Subtitle, bd=7, width=8, state=DISABLED, textvariable=txtPapas)
+    textPapas.grid(row=4, column=1)
+    textPollo = Entry(marcoComida, font=Subtitle, bd=7, width=8, state=DISABLED, textvariable=txtPollo)
+    textPollo.grid(row=5, column=1)
+    textPastas = Entry(marcoComida, font=Subtitle, bd=7, width=8, state=DISABLED, textvariable=txtPastas)
+    textPastas.grid(row=6, column=1)
+    textArroz = Entry(marcoComida, font=Subtitle, bd=7, width=8, state=DISABLED, textvariable=txtArroz)
+    textArroz.grid(row=7, column=1)
+    textPizza = Entry(marcoComida, font=Subtitle, bd=7, width=8, state=DISABLED, textvariable=txtPizza)
+    textPizza.grid(row=8, column=1)
+
+    # Bebidas
+    Pepsi = Checkbutton(marcoBebidas, text="Pepsi---------$600", font=Subtitle, onvalue=1, offvalue=0, variable=var10,
+                        command=pepsi)
+    Pepsi.grid(row=0, column=0, sticky=W)
+    CocaCola = Checkbutton(marcoBebidas, text="Coca-Cola---$600", font=Subtitle, onvalue=1, offvalue=0, variable=var11,
+                           command=coca)
+    CocaCola.grid(row=1, column=0, sticky=W)
+    Fanta = Checkbutton(marcoBebidas, text="Fanta---------$600", font=Subtitle, onvalue=1, offvalue=0, variable=var12,
+                        command=fanta)
+    Fanta.grid(row=2, column=0, sticky=W)
+    Sprite = Checkbutton(marcoBebidas, text="Sprite--------$600", font=Subtitle, onvalue=1, offvalue=0, variable=var13,
+                         command=sprite)
+    Sprite.grid(row=3, column=0, sticky=W)
+    AguaS = Checkbutton(marcoBebidas, text="Agua\nSaborizada-$500", font=Subtitle, onvalue=1, offvalue=0,
+                        variable=var14, command=aguaS)
+    AguaS.grid(row=4, column=0, sticky=W)
+    Agua = Checkbutton(marcoBebidas, text="Agua---------$500", font=Subtitle, onvalue=1, offvalue=0, variable=var15,
+                       command=agua)
+    Agua.grid(row=5, column=0, sticky=W)
+    Andes = Checkbutton(marcoBebidas, text="Andes--------$800", font=Subtitle, onvalue=1, offvalue=0, variable=var16,
+                        command=andes)
+    Andes.grid(row=6, column=0, sticky=W)
+    Quilmes = Checkbutton(marcoBebidas, text="Quilmes------$800", font=Subtitle, onvalue=1, offvalue=0, variable=var17,
+                          command=quilmes)
+    Quilmes.grid(row=7, column=0, sticky=W)
+    Vino = Checkbutton(marcoBebidas, text="Vino----------$800", font=Subtitle, onvalue=1, offvalue=0, variable=var18,
+                       command=vino)
+    Vino.grid(row=8, column=0, sticky=W)
+
+#########################################################################
+
