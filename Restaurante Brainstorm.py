@@ -406,3 +406,122 @@ def menu():
             textPapas.config(state=DISABLED)
             txtPapas.set("0")
 #########################################################################
+#Parte 4 Fernando Garcia
+ def pollo():
+        if var6.get() == 1:
+            textPollo.config(state=NORMAL)
+            textPollo.delete(0, END)
+            textPollo.focus()
+        else:
+            textPollo.config(state=DISABLED)
+            txtPollo.set("0")
+
+    def pastas():
+        if var7.get() == 1:
+            textPastas.config(state=NORMAL)
+            textPastas.delete(0, END)
+            textPastas.focus()
+        else:
+            textPastas.config(state=DISABLED)
+            txtPastas.set("0")
+
+    def arroz():
+        if var8.get() == 1:
+            textArroz.config(state=NORMAL)
+            textArroz.delete(0, END)
+            textArroz.focus()
+        else:
+            textArroz.config(state=DISABLED)
+            txtArroz.set("0")
+
+    def pizza():
+        if var9.get() == 1:
+            textPizza.config(state=NORMAL)
+            textPizza.delete(0, END)
+            textPizza.focus()
+        else:
+            textPizza.config(state=DISABLED)
+            txtPizza.set("0")
+
+    #Bebidas
+    def pepsi():
+        if var10.get() == 1:
+            textPepsi.config(state=NORMAL)
+            textPepsi.delete(0, END)
+            textPepsi.focus()
+        else:
+            textPepsi.config(state=DISABLED)
+            txtPepsi.set("0")
+
+    def coca():
+        if var11.get() == 1:
+            textCocaCola.config(state=NORMAL)
+            textCocaCola.delete(0, END)
+            textCocaCola.focus()
+        else:
+            textCocaCola.config(state=DISABLED)
+            txtCoca.set("0")
+
+    def fanta():
+        if var12.get() == 1:
+            textFanta.config(state=NORMAL)
+            textFanta.delete(0, END)
+            textFanta.focus()
+        else:
+            textFanta.config(state=DISABLED)
+            txtFanta.set("0")
+
+    def sprite():
+        if var13.get() == 1:
+            textSprite.config(state=NORMAL)
+            textSprite.delete(0, END)
+            textSprite.focus()
+        else:
+            textSprite.config(state=DISABLED)
+            txtSprite.set("0")
+
+    def aguaS():
+        if var14.get() == 1:
+            textAguaS.config(state=NORMAL)
+            textAguaS.delete(0, END)
+            textAguaS.focus()
+        else:
+            textAguaS.config(state=DISABLED)
+            txtAguaS.set("0")
+
+    def agua():
+        if var15.get() == 1:
+            textAgua.config(state=NORMAL)
+            textAgua.delete(0, END)
+            textAgua.focus()
+        else:
+            textAgua.config(state=DISABLED)
+            txtAgua.set("0")
+
+    def andes():
+        if var16.get() == 1:
+            textAndes.config(state=NORMAL)
+            textAndes.delete(0, END)
+            textAndes.focus()
+        else:
+            textAndes.config(state=DISABLED)
+            txtAndes.set("0")
+
+    def quilmes():
+        if var17.get() == 1:
+            textQuilmes.config(state=NORMAL)
+            textQuilmes.delete(0, END)
+            textQuilmes.focus()
+        else:
+            textQuilmes.config(state=DISABLED)
+            txtQuilmes.set("0")
+
+    def vino():
+        if var18.get() == 1:
+            textVino.config(state=NORMAL)
+            textVino.delete(0, END)
+            textVino.focus()
+        else:
+            textVino.config(state=DISABLED)
+            txtVino.set("0")
+#########################################################################
