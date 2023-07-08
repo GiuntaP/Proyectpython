@@ -525,3 +525,106 @@ def menu():
             textVino.config(state=DISABLED)
             txtVino.set("0")
 #########################################################################
+#Parte 5 Franco Leone 
+          textVino.focus()
+        else:
+            textVino.config(state=DISABLED)
+            txtVino.set("0")
+
+    # Marco Menu
+    marcoSuperior = Frame(ventanaMenu, bd=5, relief=RIDGE, bg="#FF9933")
+    marcoSuperior.pack(side=TOP)
+
+    # Titulo de la ventana menu
+    tituloMenu = Label(marcoSuperior, text="RESTAURANTE BS", font=Title, fg="white", bg="#FF8000", width=53)
+    tituloMenu.grid(row=0, column=0)
+
+    # Marcos secundarios
+    marcoMenu = Frame(ventanaMenu, bd=10, relief=RIDGE, bg="#FF8000")
+    marcoMenu.pack(side=LEFT)
+
+    marcoCosto = Frame(marcoMenu, bd=2, relief=RIDGE, bg="#FF8000")
+    marcoCosto.pack(side=BOTTOM)
+
+    marcoComida = LabelFrame(marcoMenu, text="Platos", bd=5, font=Subtitle, fg="white", relief=RIDGE, bg="#202020")
+    marcoComida.pack(side=LEFT)
+
+    marcoBebidas = LabelFrame(marcoMenu, text="Bebidas", bd=5, font=Subtitle, fg="white", relief=RIDGE, bg="#202020")
+    marcoBebidas.pack(side=LEFT)
+
+    # Marcos de recibo
+    ladoDerecho = Frame(marcoMenu, bd=5, relief=RIDGE, bg="#202020")
+    ladoDerecho.pack(side=RIGHT)
+    marcoTexto = Frame(ladoDerecho, bd=5, relief=RIDGE, bg="#202020")
+    marcoTexto.pack()
+    marcoBoton = Frame(ladoDerecho, bd=5, relief=RIDGE, bg="#202020")
+    marcoBoton.pack()
+
+    # Variables de comida
+    var1 = IntVar()
+    var2 = IntVar()
+    var3 = IntVar()
+    var4 = IntVar()
+    var5 = IntVar()
+    var6 = IntVar()
+    var7 = IntVar()
+    var8 = IntVar()
+    var9 = IntVar()
+    # Variables Bebidas
+    var10 = IntVar()
+    var11 = IntVar()
+    var12 = IntVar()
+    var13 = IntVar()
+    var14 = IntVar()
+    var15 = IntVar()
+    var16 = IntVar()
+    var17 = IntVar()
+    var18 = IntVar()
+
+    # Variables para textos: Comida
+    txtAsado = StringVar()
+    txtAsado.set("0")
+    txtMilanesa = StringVar()
+    txtMilanesa.set("0")
+    txtPure = StringVar()
+    txtPure.set("0")
+    txtEnsalada = StringVar()
+    txtEnsalada.set("0")
+    txtPapas = StringVar()
+    txtPapas.set("0")
+    txtPollo = StringVar()
+    txtPollo.set("0")
+    txtPastas = StringVar()
+    txtPastas.set("0")
+    txtArroz = StringVar()
+    txtArroz.set("0")
+    txtPizza = StringVar()
+    txtPizza.set("0")
+
+    # Variables para textos: Bebidas
+    txtPepsi = StringVar()
+    txtPepsi.set("0")
+    txtCoca = StringVar()
+    txtCoca.set("0")
+    txtFanta = StringVar()
+    txtFanta.set("0")
+    txtSprite = StringVar()
+    txtSprite.set("0")
+    txtAguaS = StringVar()
+    txtAguaS.set("0")
+    txtAgua = StringVar()
+    txtAgua.set("0")
+    txtAndes = StringVar()
+    txtAndes.set("0")
+    txtQuilmes = StringVar()
+    txtQuilmes.set("0")
+    txtVino = StringVar()
+    txtVino.set("0")
+
+    # Variable para costos
+    # varComida = str(varCostoComida.get())
+    # varBebidas = str(varCostoBebidas.get())
+    # varTotal = str(total.get())
+
+    varcostocomida = StringVar()
+#########################################################################
